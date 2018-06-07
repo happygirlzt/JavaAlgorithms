@@ -1,0 +1,10 @@
+/*
+  This sorting algorithm used the idea of
+  divide and conquer.
+
+  It finds the element called Pivot which
+  divides the array into two parts in such
+  a way that elements in the left half are
+  smaller than pivot and elements in the
+  right are greater than pivot
+*/

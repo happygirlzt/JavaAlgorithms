@@ -1,0 +1,4 @@
+<2018-06-07 Thu>
+Dear there,
+
+   This is my repo about the implemention of essential data structures and algorithms in Java. Even though I learned DSA three years ago, I still think I do not grasp it well. So, I prefer to use this chance to strengthen my programming skills with the Java language.

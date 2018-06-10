@@ -4,3 +4,40 @@
 Dear there,
 
    This is my repo about the implemention of essential data structures and algorithms in Java. Even though I learned DSA three years ago, I still think I do not grasp it well. So, I prefer to use this chance to strengthen my programming skills with the Java language.
+
+* Data Structures
+** Linked List
+** Stack
+** Queue
+** Tree
+- Print Left View of a given binary tree
+** Heap
+** Graph
+* Algorithms
+** Number Theory
+** Binary Search
+
+** Graphs
+- DFS
+- BFS
+- Dijkstra's Shortest Path
+- Floyd Warshall
+- Minimum Spanning Tree
+  + Kruskal's MST
+  + Prim's MST
+- Maximum Flow
+- Lowest Common Ancestor
+
+** Dynamic Programming
+- Longest Common Subsequence
+- Edit Distance
+** Divide and Conquer
+- Quick Sort
+- Merge Sort
+** Misc
+- Binary Indexed Tree
+- Binary Search Tree
+- Hashing
+- Bit Algorithms
+- String Algorithms
+  + KMP

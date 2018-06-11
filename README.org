@@ -8,7 +8,9 @@ Dear there,
 * Data Structures
 ** Linked List
 ** Stack
+- Implementing a stack using two queues[[DataStructures/Stackby2queues.java]]
 ** Queue
+- Implementing a queue using two stacks[[DataStructures/Queueby2stacks.java]]
 ** Tree
 - Print Left View of a given binary tree
 ** Heap
@@ -17,20 +19,26 @@ Dear there,
 ** Number Theory
 ** Binary Search
 
-** Graphs
-- DFS
-- BFS
-- Dijkstra's Shortest Path
-- Floyd Warshall
+** Graphs Algorithms
+- Depth First Search(DFS)
+- Breadth First Search(BFS)
+- Shortest Path
+  + Dijkstra's Shortest Path
+  + Floyd Warshall
 - Minimum Spanning Tree
   + Kruskal's MST
   + Prim's MST
+- Topological Sorting
 - Maximum Flow
 - Lowest Common Ancestor
 
 ** Dynamic Programming
-- Longest Common Subsequence
+- Longest Common Subsequence(LCS)
+- Longest Increasing Subsequence
 - Edit Distance
+- Subset Sum Problem
+
+** Searching and Sorting
 ** Divide and Conquer
 - Quick Sort
 - Merge Sort

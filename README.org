@@ -5,12 +5,33 @@ Dear there,
 
    This is my repo about the implemention of essential data structures and algorithms in Java. Even though I learned DSA three years ago, I still think I do not grasp it well. So, I prefer to use this chance to strengthen my programming skills with the Java language.
 
+* Asymptotic Notations
+** Big-Theta
+The theta notation bounds a functions from above and below, so it defines exact asymptotic behavior.
+
+Big-Theta serve as both a lower bound and upper bound.
+
+- Some English-language equivalents to Big-Theta notation
+| Big-Theta                      | English                 |
+|--------------------------------+-------------------------|
+| Θ(c), for some constant c >= 0 | constant                |
+| Θ(log n)                       | logarithmic in n        |
+| Θ(n)                           | linear in n             |
+| Θ(n log n)                     | linear-logarithmic in n |
+| Θ(n²)                          | quadratic in n          |
+
+** Big-O notation
+To determine an /upper bound/ for the behavior od a function, that is, to determine how /bad/ the performance of the function can get.
+
+** Big-Omega
+To provide a crude /lower bound/ for a function.
+To show how good a function can be.
 * Data Structures
 ** Linked List
 ** Stack
-- Implementing a stack using two queues[[DataStructures/Stackby2queues.java]]
+- [[file:./DataStructures/Stackby2queues.java][Implementing a stack using two queues]]
 ** Queue
-- Implementing a queue using two stacks[[DataStructures/Queueby2stacks.java]]
+- [[file:./DataStructures/Queueby2stacks.java][Implementing a queue using two stacks]]
 ** Tree
 - Print Left View of a given binary tree
 ** Heap
@@ -45,7 +66,11 @@ Dear there,
 ** Misc
 - Binary Indexed Tree
 - Binary Search Tree
+  + [[file:./Misc/checkBST.java][Check if a binary tree is BST or not]]
 - Hashing
 - Bit Algorithms
 - String Algorithms
   + KMP
+
+* References
+1. [https://www.geeksforgeeks.org/analysis-of-algorithms-set-3asymptotic-notations/]

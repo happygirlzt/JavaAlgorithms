@@ -5,65 +5,69 @@
  *
  */
 public class MergeSort1 {
-	// merge
-	public static int[] merge(int[] nums, int l, int m, int r) {
+	public static void mergeSort(int[] nums, int l, int r) {
+		if (l < r) {
+			int mid = (l + r) >> 1;
 
-		int[] n1 = new int[m - l + 1];
-		int[] n2 = new int[r - m];
+			mergeSort(nums, l, mid);
+			mergeSort(nums, mid + 1, r);
 
-		// Copy data to temp arrays
-		for (int i = 0; i < n1.length; i++) {
-			n1[i] = nums[l + i];
+			merge(nums, l, mid, r);
+		}
+	}
+
+	public static void merge(int[] nums, int l, int mid, int r) {
+		int n1 = mid - l + 1;
+		int n2 = r - mid;
+
+		int[] Left = new int[n1];
+		int[] Right = new int[n2];
+		
+		// Copy the values to Left and Right
+		for (int i = 0; i < n1; i++) {
+			// Cannnot treat l as 0 by default
+			Left[i] = nums[l + i];
 		}
 
-		for (int j = 0; j < n2.length; j++) {
-			n2[j] = nums[m + j + 1];
+		for (int j = 0; j < n2; j++) {
+			Right[j] = nums[j + mid + 1];
 		}
 
 		int i = 0, j = 0;
+
+		// k is the index of nums
 		int k = l;
-		while (i < n1.length && j < n2.length) {
-			if (n1[i] < n2[j]) {
-				nums[k] = n1[i];
+		while (i < n1 && j < n2) {
+			if (Left[i] <= Right[j]) {
+				nums[k] = Left[i];
 				i++;
 			} else {
-				nums[k] = n2[j];
+				nums[k] = Right[j];
 				j++;
 			}
-
 			k++;
 		}
 
-		while (i < n1.length) {
-			nums[k] = n1[i];
+		while (i < n1) {
+			nums[k] = Left[i];
 			i++;
 			k++;
 		}
 
-		while (j < n2.length) {
-			nums[k] = n2[j];
+		while (j < n2) {
+			nums[k] = Right[j];
 			j++;
 			k++;
 		}
 
-		return nums;
-	}
-
-	// Recursive
-	public static void mergeSort(int[] nums, int l, int r) {
-		if (l < r) {
-			int m = (l + r) >> 1;
-
-			// Sort the first part
-			mergeSort(nums, l, m);
-			mergeSort(nums, m + 1, r);
-
-			merge(nums, l, m, r);
-		}
+		// nums;
 	}
 
 	public static void main(String[] args) {
 		int[] a = { 3, 5, 8, 2, 1, 0, -3 };
 		mergeSort(a, 0, a.length - 1);
+		for (int i = 0; i < a.length; i++) {
+			System.out.println(a[i]);
+		}
 	}
 }

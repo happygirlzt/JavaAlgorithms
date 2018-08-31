@@ -2,36 +2,32 @@
    current node and key value */
 
 class Node {
-    int key;
-    Node left, right;
+	int key;
+	Node left, right;
 
-    public Node(int item) {
-        key = item;
-        left = right = null;
-    }
+	public Node(int item) {
+		key = item;
+		left = right = null;
+	}
 }
 
 class BinaryTree {
-    // root
-    Node root;
+	// root
+	Node root;
 
-    // constructors
-    BinaryTree(int key) {
-        root = new Node(key);
-    }
+	// constructors
+	BinaryTree(int key) {
+		root = new Node(key);
+	}
 
-    BinaryTree() {
-        root = null;
-    }
+	BinaryTree() {
+		root = null;
+	}
 
-    boolean IsBinarySearchTree(Node root) {
+	public static void main(String[] args) {
+		BinaryTree tree = new BinaryTree();
 
-    }
-
-    public static void main(String[] args) {
-        BinaryTree tree = new BinaryTree();
-
-        // create root
-        tree.root = new Node(1);
-    }
+		// create root
+		tree.root = new Node(1);
+	}
 }

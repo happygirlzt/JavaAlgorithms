@@ -1,3 +1,5 @@
+package DataStructures;
+
 // Java program to implement a stack using two queues
 
 import java.util.LinkedList;
@@ -69,21 +71,5 @@ public class Stackby2queues {
 
     public int size() {
         return curr_size;
-    }
-
-    public static void main(String[] args) {
-        Stackby2queues s = new Stackby2queues();
-        s.push(1);
-        s.push(2);
-        s.push(3);
-        s.push(4);
-
-        System.out.println("current size: " + s.size() + "\n");
-        System.out.println(s.top());
-        s.pop();
-        System.out.println(s.top());
-        s.pop();
-        System.out.println(s.top());
-        System.out.println("current size: " + s.size() + "\n");
     }
 }

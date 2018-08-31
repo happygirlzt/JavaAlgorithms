@@ -3,7 +3,7 @@
 
 Dear there,
 
-   This is my repo about the implemention of essential data structures and algorithms in Java. Even though I learned DSA three years ago, I still think I do not grasp it well. So, I prefer to use this chance to strengthen my programming skills with the Java language.
+This is my repo about the implemention of essential data structures and algorithms in Java. Even though I learned DSA three years ago, I still think I do not grasp it well. So, I prefer to use this chance to strengthen my programming skills with the Java language.
 
 * Asymptotic Notations
 ** Big-Theta
@@ -28,12 +28,20 @@ To provide a crude /lower bound/ for a function.
 To show how good a function can be.
 * Data Structures
 ** Linked List
-** Stack
+** Stack !IMPORTANT
 - [[file:./DataStructures/Stackby2queues.java][Implementing a stack using two queues]]
-** Queue
+** Queue IMPORTANT
 - [[file:./DataStructures/Queueby2stacks.java][Implementing a queue using two stacks]]
 ** Tree
+*** Commom Problems
+- Tree Travesal!!!
+  + Depth First Search: Stack
+  + Breadth First Search: Queue
+
+
 - Print Left View of a given binary tree
+
+*** Trie字典树
 ** Heap
 ** Graph
 * Algorithms
@@ -63,6 +71,7 @@ To show how good a function can be.
 ** Divide and Conquer
 - Quick Sort
 - Merge Sort
+** Recursive!!!
 ** Misc
 - Binary Indexed Tree
 - Binary Search Tree

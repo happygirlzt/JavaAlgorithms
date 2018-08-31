@@ -1,3 +1,5 @@
+package SearchingSorting;
+
 public class MergeSort {
     public static void merge(int[] arr, int l, int m, int r) {
         int i, j, k;

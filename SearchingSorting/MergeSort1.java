@@ -1,4 +1,8 @@
+package SearchingSorting;
+
 /**
+ * MergeSort Best Ω(n log(n))	Worst O(n log(n))
+ * 
  * Created on 23 Aug 2018
  * 
  * @author happygirlzt

@@ -1,3 +1,5 @@
+package Misc;
+
 
 /**
  *  Created on 31 Aug 2018
@@ -66,7 +68,6 @@ public class Trie {
 
 class TrieNode {
 	private HashMap<Character, TrieNode> children;
-	private String content;
 	private boolean isWord;
 
 	public void setEndOfWord(boolean v) {

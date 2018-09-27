@@ -1,3 +1,5 @@
+package SearchingSorting;
+
 // Time complexity of the algorithm is O(n)
 
 public class BucketSort {

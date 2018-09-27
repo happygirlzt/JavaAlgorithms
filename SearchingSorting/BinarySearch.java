@@ -1,3 +1,5 @@
+package SearchingSorting;
+
 // Binary Search
 // @happygirlzt
 // Created on 19 Aug, 2018

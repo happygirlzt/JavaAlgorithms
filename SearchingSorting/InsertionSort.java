@@ -1,3 +1,8 @@
+package SearchingSorting;
+
+/**
+ * Time complexity is O(n^2)
+ */
 public class InsertionSort{
 
     public static void insertionSort(int arr[]) {
@@ -27,6 +32,24 @@ public class InsertionSort{
         }
         System.out.println();
     }
+
+    // UPD on 18 Sep 2018
+
+    public static void insertionSort1(int[] list) {
+        for (int i = 1; i < list.length; i++) {
+            /** Insert list[i] into a sorted sublist list[0...i-1] so that
+             list[0...i] is sorted */
+            int cur = list[i];
+            int k;
+            for (k = i - 1; k >= 0 && list[k] > cur; k--) {
+                list[k + 1] = list[k];
+            }
+
+            // Insert the current element into list[k + 1]
+            list[k + 1] = cur;
+        }
+    }
+
 
     public static void main(String[] args) {
         int arr[] = {12, 11, 14, 23, 2};

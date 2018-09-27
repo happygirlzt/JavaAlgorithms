@@ -1,3 +1,5 @@
+package DataStructures;
+
 /**
  * Using Stack to implement the inorder traversal of binary tree
  * Created on 2018-08-26

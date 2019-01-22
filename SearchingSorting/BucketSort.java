@@ -1,49 +1,41 @@
-package SearchingSorting;
-
-// Time complexity of the algorithm is O(n)
+import java.util.List;
+import java.util.Collections;
 
 public class BucketSort {
-    public static void display(int[] arr, int size) {
-        int i;
-        for (i = 0; i < size; i ++) {
-            System.out.println(arr[i] + " ");
-        }
-        System.out.print("\n");
-    }
+    static void bucketSort(int[] a, int n) {
+        List<Integer>[] buckets = new List[12];
 
-    public static int getMax(int[] arr, int size) {
-        int m = arr[0];
-        for (int i = 1; i < size; i++) {
-            if (arr[i] > m) {
-                m = arr[i];
+        for (int i = 0; i < n; i++) {
+            int bi = a[i];
+
+            buckets[bi].add(a[i]);
+        }
+
+        for (int i = 0; i < n; i++) {
+            Collections.sort(buckets[i]);
+        }
+
+        int index = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < buckets[i].size(); j++) {
+                a[index++] = buckets[i].get(j);
             }
         }
-
-        return m;
     }
 
-    public static int[] bucketSort(int[] arr, int maxValue) {
+    static void printArray(int[] a) {
+        for (int i = 0; i < a.length; i++) {
+            System.out.print(a[i] + " ");
+        }
 
-        // Bucket Sort
-        int[] Bucket = new int[maxValue + 1];
-        int[] sorted_sequence = new int[arr.length];
-
-        for (int i = 0; i < arr.length; i++)
-            Bucket[arr[i]]++;
-
-        int outPos = 0;
-        for (int i = 0; i < Bucket.length; i ++)
-            for (int j = 0; j < Bucket[i]; j++)
-                sorted_sequence[outPos++] = i;
-
-        return sorted_sequence;
+        System.out.println();
     }
 
     public static void main(String[] args) {
-        int[] num = {3, 5, 1, 8, 2, 7, 9, 3, 5};
-        int n = num.length;
-        int maxVal = getMax(num, n);
+        int[] a = {1, 9, 2, 4, 7, 3};
+        int n = a.length;
+        bucketSort(a, n);
 
-        display(bucketSort(num, maxVal), n);
+        printArray(a);
     }
 }

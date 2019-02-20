@@ -4,6 +4,7 @@
  * Created on 2018-08-28 by happygirlzt
  *
  * UPD on 18 Sep 2018
+ * UPD on 20 Feb 2019
  *
  * public void quickSort(int[] list) {
  *   if (list.length > 1) {
@@ -20,6 +21,7 @@
  * subarray with the other array empty
  * O(nlogn) best time, the pivot divides the array each into two parts of
  * about the same size. T(n) = T(n/2) + T(n/2) + n
+ * Not stable
  */
 
 package SearchingSorting;
@@ -27,106 +29,49 @@ package SearchingSorting;
 import java.util.Arrays;
 
 public class QuickSort {
-    public static void quickSort(int[] a) {
-        if (a.length == 0)
-            return;
-        partition(a, 0, a.length - 1);
+    public static void sort(int[] nums) {
+        quickSort(nums, 0, nums.length - 1);
     }
 
-    public static void partition(int[] a, int left, int right) {
-        int mid = (left + right) >> 1;
-        int pivot = a[mid];
-
-        if (left > right)
+    private static void quickSort(int[] nums, int lo, int hi) {
+        if (lo >= hi)
             return;
+        int pivotIndex = partition(nums, lo, hi);
 
-        int i = left, j = right;
+        quickSort(nums, lo, pivotIndex);
+        quickSort(nums, pivotIndex + 1, hi);
+    }
 
-        while (i <= j) {
-            while (a[i] < pivot) {
-                i++;
-            }
-
-            while (a[j] > pivot) {
-                j--;
-            }
-
-            if (i <= j) {
-                int tmp = a[i];
-                a[i] = a[j];
-                a[j] = tmp;
-                j--;
-                i++;
+    private static int partition(int[] nums, int lo, int hi) {
+        // Do not forget to cast to int
+        int pivotIndex = (int) (Math.random() * (hi - lo + 1) + lo);
+        int pivot = nums[pivotIndex];
+        swap(nums, pivotIndex, hi);
+        int savedHi = hi;
+        hi--;
+        while (lo <= hi) {
+            if (nums[lo] < pivot) {
+                lo++;
+            } else {
+                swap(nums, lo, hi);
+                hi--;
             }
         }
+        swap(nums, lo, savedHi);
+        return lo;
+    }
 
-        if (left < j) {
-            partition(a, left, j);
-        }
-
-        if (right > i) {
-            partition(a, i, right);
-        }
+    private static void swap(int[] nums, int i, int j) {
+        int tmp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = tmp;
     }
 
     public static void main(String[] args) {
-        int[] x = { 9, 2, 4, 7, 3, 7, 10 };
+        int[] x = { 1, 2, 4, 9, 3, 7, 10 };
         System.out.println(Arrays.toString(x));
 
-        quickSort(x);
+        sort(x);
         System.out.println(Arrays.toString(x));
-    }
-}
-
-class QuickSort1 {
-    public static void quickSort(int[] list) {
-        quickSort(list, 0, list.length - 1);
-    }
-
-    public static void quickSort(int[] list, int first, int last) {
-        if (last > first) {
-            int pivotIndex = partition(list, first, last);
-            quickSort(list, first, pivotIndex - 1);
-            quickSort(list, pivotIndex + 1, last);
-        }
-    }
-
-    /** Partition the array list[first ... last]
-     * Each partition place the pivot in the right place
-     */
-    public static int partition(int[] list, int first, int last) {
-        int pivot = list[first]; // choose the first element as the pivot
-        int low = first + 1;
-        int high = last;
-
-        while (high > low) {
-            // search forward from left
-            while (low <= high && list[low] <= pivot)
-                low ++;
-
-            // search backward from right
-            while (low <= high && list[high] > pivot)
-                high--;
-
-            // Swap two elements in the list
-            if (high > low) {
-                int tmp = list[high];
-                list[high] = list[low];
-                list[low] = tmp;
-            }
-        }
-
-        while (high > first && list[high] >= pivot) {
-            high --;
-
-            // Swap pivot with list[high]
-            if (pivot > list[high]) {
-                list[first] = list[high];
-                list[high] = pivot;
-                return high;
-            } else {
-                return first;
-            }
-        }
     }
 }

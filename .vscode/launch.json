@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - HeapSort",
+            "request": "launch",
+            "mainClass": "HeapSort",
+            "projectName": "JavaAlgorithms_68022885"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - MergeSort",
             "request": "launch",
             "mainClass": "SearchingSorting.MergeSort"

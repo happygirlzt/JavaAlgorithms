@@ -11,15 +11,6 @@ The theta notation bounds a functions from above and below, so it defines exact 
 
 Big-Theta serve as both a lower bound and upper bound.
 
-- Some English-language equivalents to Big-Theta notation
-| Big-Theta                      | English                 |
-|--------------------------------+-------------------------|
-| Θ(c), for some constant c >= 0 | constant                |
-| Θ(log n)                       | logarithmic in n        |
-| Θ(n)                           | linear in n             |
-| Θ(n log n)                     | linear-logarithmic in n |
-| Θ(n²)                          | quadratic in n          |
-
 ## Big-O notation
 To determine an /upper bound/ for the behavior od a function, that is, to determine how /bad/ the performance of the function can get.
 
@@ -40,6 +31,58 @@ To show how good a function can be.
 ### Heap Sort
 
 ## Graph algorithms
+### Common Problems
+1. Directed or undirected
+2. Weighted or not
+3. Sparse or dense with edges
+4. Representation: adjacency matrix, adjacency list, an edge list or other sturcture
+### Shortest Path Problem
+
+### Connectivity
+
+### Detect Cycle
+#### Directed Graphs
+1. Depth First Search
+O(V + E)
+
+Use three colors to every vertex
+- white: vertex is not processed. Initially, all vertices are white
+- gray: vertex is being processed(dfs for this vertex has started, but not finished which means that all descendants (in dfs tree) of this vertex are not processed yet( or this vertex is in function call stack))
+- black: vertex and all its descendants are processed.
+
+While doing dfs, if we encounter an edge from current vertex to a gray vertex, then this edge is back edge and hence there is a cycle.
+
+2. Breadth First Search
+Step 1: Compute in-degree for each of the vertex present in the graphs
+Step 2: Pick all the vertices with in-degree as 0 and add them into a queue
+Step 3: Remove a vertex from a queue and:
+     1. Increment count of visited nodes by 1
+     2. Decrease in-degree by 1 for all its neighboring nodes
+     3. If in-degree of a neighboring nodes is reduced to zero, then all it to the queue
+Step 4: Repeat Step 3 until the queue is empty
+Step 5: If count of visited nodes is not equal to the number of nodes in the graphm, the graph has cycle; otherwise not;
+
+
+#### Undirected Graphs
+1. Union-find
+
+### Eulerian Path
+O(E)
+
+Visits every edge exactly once.
+
+An Eulerian path to exist:
+- At most one vertex has (outdegree - indegree) = 1
+- At most one vertex has (indegree - outdegree) = 1
+- All other vertices have equal in and out degrees
+
+Find a valid starting node:
+The node with exactly one extra outgoing edge(outdegree - indegree = 1), it will be the only valid start node.
+Similarly, the node which (indegree - outdegree = 1) should be the end node.
+
+### Topological Sort
+The only type of graph which has a valid topological sort: Directed Acyclic Graphs(DAG)
+
 ## Dynamic programming
 ## Complexity analysis
 
@@ -59,3 +102,4 @@ To show how good a function can be.
 
 # References
 1. [https://www.geeksforgeeks.org/analysis-of-algorithms-set-3asymptotic-notations/]
+2. (Detect Cycle in a directed graph using colors)[https://www.geeksforgeeks.org/detect-cycle-direct-graph-using-colors/]

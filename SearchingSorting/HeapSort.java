@@ -5,29 +5,29 @@
  * and then removes the largest elements successively to obtain a sorted list.
  */
 
+package SearchingSorting;
+
 public class HeapSort {
-    private void swap(int[] a, int i, int j) {
+    private static void swap(int[] a, int i, int j) {
         int tmp = a[i];
         a[i] = a[j];
         a[j] = tmp;
     }
 
-    public void sort(int[] a) {
+    public static void sort(int[] a) {
         int n = a.length;
 
-        // build heap
         for (int i = n / 2 - 1; i >= 0; i--) {
             heapify(a, n, i);
         }
 
         for (int i = n - 1; i >= 0; i--) {
             swap(a, 0, i);
-
             heapify(a, i, 0);
         }
     }
 
-    public void heapify(int[] a, int n, int i) {
+    public static void heapify(int[] a, int n, int i) {
         int largest = i;
         int l = 2 * i + 1;
         int r = 2 * i + 2;
@@ -47,21 +47,11 @@ public class HeapSort {
         }
     }
 
-    static void printArray(int[] a) {
-        for (int i = 0; i < a.length; i++) {
-            System.out.print(a[i] + " ");
-        }
-
-        System.out.println();
-    }
-
     public static void main(String[] args) {
         int[] a = {12, 11, 13, 5, 0, 2};
         int n = a.length;
 
-        HeapSort hs = new HeapSort();
-        hs.sort(a);
-
-        printArray(a);
+        sort(a);
+        System.out.println(Arrays.toString(a));
     }
 }

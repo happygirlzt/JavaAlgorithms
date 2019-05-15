@@ -65,6 +65,9 @@ Step 5: If count of visited nodes is not equal to the number of nodes in the gra
 
 #### Undirected Graphs
 1. Union-find
+2. Depth-first search
+O(V+E)
+3. Breadth-first search
 
 ### Eulerian Path
 O(E)
@@ -93,6 +96,15 @@ The only type of graph which has a valid topological sort: Directed Acyclic Grap
 
 # Operating Systems
 ## Threads, locks, processes
+- Concurrency: multiple computations running simultaneously
+### Process
+A process is an instance of a running program that is isolated from other processes on the same machine. It has its own private section of the machine's memory.
+
+### Thread
+A thread is a locus of control inside a running program.
+
+### Race condition
+The correctness of the program(the satisfaction of postconditions and invariants) depends on the relative timing of events in concurrent computations A and B.
 ## Memory management
 ## Filesystems and networking
 
@@ -101,5 +113,6 @@ The only type of graph which has a valid topological sort: Directed Acyclic Grap
 ## Approximations
 
 # References
-1. [https://www.geeksforgeeks.org/analysis-of-algorithms-set-3asymptotic-notations/]
-2. (Detect Cycle in a directed graph using colors)[https://www.geeksforgeeks.org/detect-cycle-direct-graph-using-colors/]
+1. [GeeksForGeeks Asymptotic Notations](https://www.geeksforgeeks.org/analysis-of-algorithms-set-3asymptotic-notations/)
+2. [Detect Cycle in a directed graph using colors](https://www.geeksforgeeks.org/detect-cycle-direct-graph-using-colors/)
+3. [MIT 6.005 — Software Construction](http://web.mit.edu/6.005/www/fa15/classes/19-concurrency/)

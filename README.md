@@ -1,10 +1,5 @@
 <2018-06-07 Thu>
 
-
-Dear there,
-
-This is my repo about the implemention of essential data structures and algorithms in Java. Even though I learned DSA three years ago, I still think I do not grasp it well. So, I prefer to use this chance to strengthen my programming skills with the Java language.
-
 # Asymptotic Notations
 ## Big-Theta
 The theta notation bounds a functions from above and below, so it defines exact asymptotic behavior.
@@ -25,10 +20,16 @@ To show how good a function can be.
 ## Hashes and maps
 
 # Algorithms
-## Sorting, searching
+## Sorting
+### Bubble Sort
+### Selection Sort
+### Insertion Sort
 ### Merge Sort
 ### Quick Sort
+### Counting Sort
+### Radix Sort
 ### Heap Sort
+### Bucket Sort
 
 ## Graph algorithms
 ### Common Problems
@@ -36,6 +37,10 @@ To show how good a function can be.
 2. Weighted or not
 3. Sparse or dense with edges
 4. Representation: adjacency matrix, adjacency list, an edge list or other sturcture
+
+### Minimum Spanning Tree
+#### Kruskal's Algorithm
+#### Prim's Algorithm
 ### Shortest Path Problem
 
 ### Connectivity
@@ -116,3 +121,4 @@ The correctness of the program(the satisfaction of postconditions and invariants
 1. [GeeksForGeeks Asymptotic Notations](https://www.geeksforgeeks.org/analysis-of-algorithms-set-3asymptotic-notations/)
 2. [Detect Cycle in a directed graph using colors](https://www.geeksforgeeks.org/detect-cycle-direct-graph-using-colors/)
 3. [MIT 6.005 — Software Construction](http://web.mit.edu/6.005/www/fa15/classes/19-concurrency/)
+4. [Hackerearth Algorithms Tutorial](https://www.hackerearth.com/zh/practice/algorithms/searching/linear-search/tutorial/)

@@ -53,7 +53,6 @@ class Dijkstra {
             if (visited[x]) continue;
             visited[x] = true;
 
-            // res.add(weight);
             res[index++] = weight;
             for (int i = 0; i < g.get(x).size(); i++) {
                 int y = g.get(x).get(i).y;

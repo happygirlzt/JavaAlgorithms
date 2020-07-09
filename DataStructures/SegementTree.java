@@ -3,7 +3,7 @@
  * 
  * Range sum query https://leetcode.com/problems/range-sum-query-mutable/
  */
-public class SegementTree {
+public class SegmentTree {
     // Memory Limit Exceeded Error!!!
     class NumArray {
         int[] tree;
